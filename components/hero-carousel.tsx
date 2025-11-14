@@ -92,13 +92,15 @@ export function HeroCarousel() {
                         <span className="text-sm font-semibold">Solution BTP Professionnelle</span>
                       </div>
 
-                      <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-balance leading-tight">
-                        {slide.title}
-                        <br />
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-primary to-accent animate-gradient">
+                      {/* Title + Subtitle avec taille réduite */}
+                      <div>
+                        <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight">
+                          {slide.title}
+                        </h1>
+                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-primary to-accent animate-gradient block text-3xl md:text-4xl lg:text-5xl xl:text-6xl">
                           {slide.subtitle}
                         </span>
-                      </h1>
+                      </div>
 
                       <p className="text-lg md:text-xl lg:text-2xl text-muted-foreground text-balance max-w-xl leading-relaxed">
                         {slide.description}
