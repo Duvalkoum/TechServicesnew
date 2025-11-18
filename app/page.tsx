@@ -173,80 +173,85 @@ export default function HomePage() {
       </section>
 
       {/* Why Download Section */}
-      <section className="py-15 lg:py-32 relative overflow-hidden">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <div ref={whyDownloadAnim.ref} className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-              <div
-                className={`transition-all duration-1000 ${
-                  whyDownloadAnim.isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"
-                }`}
-              >
-                <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-8 text-balance leading-tight">
-                  Pourquoi télécharger{" "}
-                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">
-                    TechServices
-                  </span>{" "}
-                  ?
-                </h2>
-                <div className="space-y-6">
-                  {[
-                    {
-                      title: "Gagnez du temps",
-                      description:
-                        "Trouvez rapidement les bons professionnels et gérez tous vos projets depuis une seule application.",
-                    },
-                    {
-                      title: "Augmentez votre chiffre d'affaires",
-                      description:
-                        "Accédez à de nouvelles opportunités et développez votre réseau professionnel dans le BTP.",
-                    },
-                    {
-                      title: "Simplifiez votre gestion",
-                      description:
-                        "Centralisez devis, factures, planning et communication dans un seul outil professionnel.",
-                    },
-                    {
-                      title: "Travaillez en toute confiance",
-                      description: "Profils vérifiés, avis clients, paiements sécurisés et support client réactif.",
-                    },
-                  ].map((item, index) => (
-                    <div key={index} className="flex gap-4 group hover:translate-x-2 transition-transform duration-300">
-                      <div className="flex-shrink-0">
-                        <div className="bg-gradient-to-br from-success/20 to-success/10 w-12 h-12 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                          <CheckCircle className="h-6 w-6 text-success" />
-                        </div>
-                      </div>
-                      <div>
-                        <h3 className="text-xl lg:text-2xl font-bold mb-2">{item.title}</h3>
-                        <p className="text-muted-foreground leading-relaxed">{item.description}</p>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              <div
-                className={`relative transition-all duration-1000 delay-300 ${
-                  whyDownloadAnim.isVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-10"
-                }`}
-              >
-                <div className="relative group">
-                  <div className="absolute inset-0 bg-gradient-to-br from-primary/30 to-accent/30 rounded-3xl blur-2xl group-hover:blur-3xl transition-all duration-500" />
-                  <div className="relative bg-gradient-to-br from-primary/10 to-accent/10 rounded-3xl p-8 backdrop-blur-sm border border-primary/20 group-hover:scale-105 transition-all duration-500">
-                    <img
-                      src="screenmockup.jpg"
-                      alt="TechServices App"
-                       className="rounded-2xl shadow-2xl mx-auto w-full h-auto max-h-[300px] md:max-h-[350px] object-contain"
-                    />
+<section className="py-15 lg:py-32 relative overflow-hidden">
+  <div className="container mx-auto px-4">
+    <div className="max-w-4xl mx-auto">
+      {/* Titre déplacé AU-DESSUS des deux colonnes */}
+      <div ref={whyDownloadAnim.ref} className="text-center mb-12 lg:mb-16">
+        <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-balance leading-tight">
+          Pourquoi télécharger{" "}
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">
+            TechServices
+          </span>{" "}
+          ?
+        </h2>
+      </div>
+      
+      <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        {/* Colonne gauche - Points */}
+        <div
+          className={`transition-all duration-1000 ${
+            whyDownloadAnim.isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"
+          }`}
+        >
+          <div className="space-y-6">
+            {[
+              {
+                title: "Gagnez du temps",
+                description:
+                  "Trouvez rapidement les bons professionnels et gérez tous vos projets depuis une seule application.",
+              },
+              {
+                title: "Augmentez votre chiffre d'affaires",
+                description:
+                  "Accédez à de nouvelles opportunités et développez votre réseau professionnel dans le BTP.",
+              },
+              {
+                title: "Simplifiez votre gestion",
+                description:
+                  "Centralisez devis, factures, planning et communication dans un seul outil professionnel.",
+              },
+              {
+                title: "Travaillez en toute confiance",
+                description: "Profils vérifiés, avis clients, paiements sécurisés et support client réactif.",
+              },
+            ].map((item, index) => (
+              <div key={index} className="flex gap-4 group hover:translate-x-2 transition-transform duration-300">
+                <div className="flex-shrink-0">
+                  <div className="bg-gradient-to-br from-success/20 to-success/10 w-12 h-12 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                    <CheckCircle className="h-6 w-6 text-success" />
                   </div>
                 </div>
+                <div>
+                  <h3 className="text-xl lg:text-2xl font-bold mb-2">{item.title}</h3>
+                  <p className="text-muted-foreground leading-relaxed">{item.description}</p>
+                </div>
               </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Colonne droite - Image */}
+        <div
+          className={`relative transition-all duration-1000 delay-300 ${
+            whyDownloadAnim.isVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-10"
+          }`}
+        >
+          <div className="relative group">
+            <div className="absolute inset-0 bg-gradient-to-br from-primary/30 to-accent/30 rounded-3xl blur-2xl group-hover:blur-3xl transition-all duration-500" />
+            <div className="relative bg-gradient-to-br from-primary/10 to-accent/10 rounded-3xl p-8 backdrop-blur-sm border border-primary/20 group-hover:scale-105 transition-all duration-500">
+              <img
+                src="screenmockup.jpg"
+                alt="TechServices App"
+                className="rounded-2xl shadow-2xl mx-auto w-full h-auto max-h-[300px] md:max-h-[350px] object-contain"
+              />
             </div>
           </div>
         </div>
-      </section>
-
+      </div>
+    </div>
+  </div>
+</section>
       {/* Stats Section */}
       <section
         ref={statsAnim.ref}
