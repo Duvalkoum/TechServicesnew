@@ -9,7 +9,7 @@ const slides = [
     title: "Gérez vos projets BTP",
     subtitle: "avec TechServices",
     description: "L'application tout-en-un pour les professionnels du bâtiment",
-    image: "/hero/slide1.jpg", 
+    image: "/hero/slide12.jpg", 
     cta: "Télécharger l'App",
     ctaLink: "/app-mobile",
     icon: Smartphone,
