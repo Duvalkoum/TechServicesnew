@@ -26,6 +26,14 @@ export const metadata: Metadata = {
   keywords:
     "BTP, construction, application mobile, dashboard professionnel, techniciens, entreprises BTP, architectes, bureaux d'étude",
   authors: [{ name: "TechServices" }],
+
+  // ✅ FAVICON ICI
+  icons: {
+    icon: "/logonavbar.png",
+    shortcut: "/logonavbar.png",
+    apple: "/logonavbar.png",
+  },
+
   openGraph: {
     title: "TechServices - Solution BTP Professionnelle",
     description: "Application mobile et dashboard web pour le secteur BTP",
@@ -34,12 +42,13 @@ export const metadata: Metadata = {
     locale: "fr_FR",
     type: "website",
   },
-  
+
   twitter: {
     card: "summary_large_image",
     title: "TechServices - Solution BTP Professionnelle",
     description: "Application mobile et dashboard web pour le secteur BTP",
   },
+
   generator: "v0.app",
 }
 
