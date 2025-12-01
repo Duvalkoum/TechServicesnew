@@ -86,13 +86,13 @@ export function Footer() {
           <div>
             <h3 className="font-sans font-semibold text-lg mb-4">Légal</h3>
             <ul className="space-y-2">
-              <li>
+              {/* <li>
                 <Link
                   href="/legales"
                 >
                   Mentions Légales
                 </Link>
-              </li>
+              </li> */}
               <li>
                 <Link href="/CGU" className="text-background/70 hover:text-primary text-sm transition-colors">
                   CGU
@@ -106,11 +106,11 @@ export function Footer() {
                   Confidentialité
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link href="/cookies" className="text-background/70 hover:text-primary text-sm transition-colors">
                   Cookies
                 </Link>
-              </li>
+              </li> */}
             </ul>
           </div>
 
